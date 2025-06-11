@@ -125,7 +125,7 @@ const SettingItem = ({
 <Button
                             onClick={handleCancel}
                             disabled={isLoading}
-                            className="px-3 py-1 text-sm rounded-lg bg-slate-600 text-black hover:bg-slate-500"
+                            className="px-3 py-1 text-sm rounded-lg bg-slate-600 text-white hover:bg-slate-500"
                         >
                             Cancel
                         </Button>
@@ -135,12 +135,12 @@ const SettingItem = ({
                         onClick={settingType === 'button' ? undefined : handleEdit}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-isDanger
+className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+                            isDanger
                                 ? 'bg-error text-white hover:bg-red-600'
                                 : settingType === 'button'
-                                ? 'bg-slate-700 text-black hover:bg-slate-600'
-                                : 'bg-slate-700 text-black hover:bg-slate-600 cursor-pointer'
+                                ? 'bg-slate-700 text-white hover:bg-slate-600'
+                                : 'bg-slate-700 text-white hover:bg-slate-600 cursor-pointer'
                         }`}
                     >
                         {actionText}
