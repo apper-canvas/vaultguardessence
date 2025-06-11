@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { toast } from 'react-toastify';
-import ApperIcon from './ApperIcon';
-import CredentialList from './CredentialList';
-import CredentialModal from './CredentialModal';
-import PasswordGenerator from './PasswordGenerator';
-import CategorySidebar from './CategorySidebar';
-import { credentialService } from '../services';
+import CategorySidebarNavigation from '@/components/organisms/CategorySidebarNavigation';
+import VaultSearchBar from '@/components/organisms/VaultSearchBar';
+import CredentialListDisplay from '@/components/organisms/CredentialListDisplay';
+import CredentialDetailModal from '@/components/organisms/CredentialDetailModal';
+import PasswordGeneratorModal from '@/components/organisms/PasswordGeneratorModal';
+import { credentialService } from '@/services';
 
-const MainFeature = () => {
+const VaultPage = () => {
   const [credentials, setCredentials] = useState([]);
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ const MainFeature = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCredential, setSelectedCredential] = useState(null);
   const [showCredentialModal, setShowCredentialModal] = useState(false);
-  const [showGenerator, setShowGenerator] = useState(false);
+  const [showGeneratorModal, setShowGeneratorModal] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
@@ -119,9 +119,9 @@ const MainFeature = () => {
   const handleUseGeneratedPassword = (password) => {
     if (showCredentialModal) {
       // If credential modal is open, use the password there
-      setSelectedCredential(prev => prev ? { ...prev, password } : { password });
+      setSelectedCredential(prev => ({ ...prev, password: password }));
     }
-    setShowGenerator(false);
+    setShowGeneratorModal(false);
     toast.success('Generated password ready to use');
   };
 
@@ -129,7 +129,7 @@ const MainFeature = () => {
     <div className="h-full flex max-w-full overflow-hidden bg-background">
       {/* Category Sidebar */}
       <div className="w-64 bg-surface border-r border-slate-700 flex-shrink-0">
-        <CategorySidebar
+        <CategorySidebarNavigation
           categories={categories}
           selectedCategory={selectedCategory}
           onCategorySelect={setSelectedCategory}
@@ -142,47 +142,15 @@ const MainFeature = () => {
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col overflow-hidden min-w-0">
-        {/* Search Header */}
-        <div className="flex-shrink-0 p-6 bg-surface border-b border-slate-700">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-2xl font-bold text-slate-100">Password Vault</h2>
-            <div className="flex items-center space-x-2">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setShowGenerator(true)}
-                className="px-4 py-2 bg-info text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2"
-              >
-                <ApperIcon name="Key" size={16} />
-                <span>Generate</span>
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleAddCredential}
-                className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition-colors flex items-center space-x-2"
-              >
-                <ApperIcon name="Plus" size={16} />
-                <span>Add</span>
-              </motion.button>
-            </div>
-          </div>
-          
-          <div className="relative">
-            <ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" />
-            <input
-              type="text"
-              placeholder="Search credentials..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-          </div>
-        </div>
+        <VaultSearchBar
+          searchTerm={searchTerm}
+          onSearchTermChange={(e) => setSearchTerm(e.target.value)}
+          onAddCredential={handleAddCredential}
+          onGeneratePassword={() => setShowGeneratorModal(true)}
+        />
 
-        {/* Credentials List */}
         <div className="flex-1 overflow-y-auto custom-scrollbar">
-          <CredentialList
+          <CredentialListDisplay
             credentials={filteredCredentials}
             loading={loading}
             error={error}
@@ -193,10 +161,9 @@ const MainFeature = () => {
         </div>
       </div>
 
-      {/* Credential Modal */}
       <AnimatePresence>
         {showCredentialModal && (
-          <CredentialModal
+          <CredentialDetailModal
             credential={selectedCredential}
             categories={categories}
             isEditing={isEditing}
@@ -213,11 +180,10 @@ const MainFeature = () => {
         )}
       </AnimatePresence>
 
-      {/* Password Generator Modal */}
       <AnimatePresence>
-        {showGenerator && (
-          <PasswordGenerator
-            onClose={() => setShowGenerator(false)}
+        {showGeneratorModal && (
+          <PasswordGeneratorModal
+            onClose={() => setShowGeneratorModal(false)}
             onUsePassword={handleUseGeneratedPassword}
           />
         )}
@@ -226,4 +192,4 @@ const MainFeature = () => {
   );
 };
 
-export default MainFeature;
+export default VaultPage;

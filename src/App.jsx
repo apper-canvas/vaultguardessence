@@ -8,12 +8,12 @@ function App() {
     <BrowserRouter>
       <div className="min-h-screen bg-background text-slate-100">
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<routes.vault.component />} />
+<Route path="/" element={<Layout />}>
+              <Route index element={<routes.home.component />} />
             {routeArray.map((route) => (
               <Route
                 key={route.id}
-                path={route.path}
+path={route.path}
                 element={<route.component />}
               />
             ))}

@@ -1,8 +1,8 @@
-import Home from '../pages/Home';
-import Vault from '../pages/Vault';
-import Generator from '../pages/Generator';
-import Settings from '../pages/Settings';
-import NotFound from '../pages/NotFound';
+import HomePage from '@/components/pages/HomePage';
+import VaultPage from '@/components/pages/VaultPage';
+import GeneratorPage from '@/components/pages/GeneratorPage';
+import SettingsPage from '@/components/pages/SettingsPage';
+import NotFoundPage from '@/components/pages/NotFoundPage';
 
 export const routes = {
   home: {
@@ -10,35 +10,35 @@ export const routes = {
     label: 'Home',
     path: '/home',
     icon: 'Home',
-    component: Home
+    component: HomePage
   },
   vault: {
     id: 'vault',
     label: 'Vault',
     path: '/vault',
     icon: 'Shield',
-    component: Vault
+    component: VaultPage
   },
   generator: {
     id: 'generator',
     label: 'Generator',
     path: '/generator',
     icon: 'Key',
-    component: Generator
+    component: GeneratorPage
   },
   settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
-    component: Settings
+    component: SettingsPage
   },
   notFound: {
     id: 'notFound',
     label: 'Not Found',
     path: '/404',
     icon: 'AlertCircle',
-    component: NotFound
+    component: NotFoundPage
   }
 };
 
