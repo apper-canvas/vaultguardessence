@@ -87,23 +87,23 @@ return (
             <ModalOverlay key="overlay" onClick={onClose} />
             <ModalWrapper key="modal" maxWidth="max-w-xl">
                 <div 
-                    className="relative bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-2xl overflow-hidden"
+                    className="relative bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden"
                     role="dialog"
                     aria-modal="true"
                     aria-labelledby="password-generator-title"
                 >
-                    {/* Header with enhanced styling */}
-                    <div className="relative bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-sm">
+                    {/* Header with clean styling */}
+                    <div className="relative bg-gray-50 border-b border-gray-100">
                         <ModalHeader 
                             id="password-generator-title"
                             title="Password Generator" 
                             onClose={onClose}
-                            className="text-white font-semibold text-xl"
+                            className="text-gray-900 font-semibold text-xl"
                         />
                     </div>
                     
-                    {/* Main content with improved spacing and styling */}
-                    <div className="p-8 space-y-8 bg-gradient-to-b from-slate-900/50 to-slate-800/30">
+                    {/* Main content with clean spacing and styling */}
+                    <div className="p-8 space-y-8 bg-white">
                         {/* Password display section */}
                         <div className="relative">
                             <GeneratedPasswordDisplay
@@ -114,19 +114,19 @@ return (
                             />
                         </div>
 
-                        {/* Configuration section with enhanced separation */}
-                        <div className="relative bg-slate-800/40 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
+                        {/* Configuration section with clean separation */}
+                        <div className="relative bg-gray-50 rounded-xl p-6 border border-gray-100">
                             <PasswordGenerationConfig
                                 config={config || {}}
                                 onConfigChange={handleConfigChange}
                             />
                         </div>
 
-                        {/* Action buttons with enhanced styling */}
-                        <div className="flex items-center justify-end space-x-4 pt-6 border-t bg-gradient-to-r from-slate-700/50 via-slate-600/30 to-slate-700/50" style={{ borderImageSlice: 1 }}>
+                        {/* Action buttons with clean styling */}
+                        <div className="flex items-center justify-end space-x-4 pt-6 border-t border-gray-100">
                             <Button
                                 onClick={onClose}
-                                className="px-6 py-3 text-slate-300 hover:text-white bg-slate-700/50 hover:bg-slate-600/70 rounded-xl border border-slate-600/50 hover:border-slate-500/70 transition-all duration-200 font-medium backdrop-blur-sm"
+                                className="px-6 py-3 text-gray-600 hover:text-gray-900 bg-white hover:bg-gray-50 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-200 font-medium"
                                 aria-label="Cancel password generation"
                             >
                                 Cancel
@@ -136,7 +136,7 @@ return (
                                 text="Use Password"
                                 onClick={() => onUsePassword?.(generatedPassword)}
                                 disabled={!generatedPassword}
-                                className="bg-gradient-to-r from-primary via-emerald-600 to-primary text-white hover:from-emerald-600 hover:via-primary hover:to-emerald-600 disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 rounded-xl shadow-lg hover:shadow-xl font-semibold border border-emerald-500/50 hover:border-emerald-400/70 transition-all duration-200"
+                                className="bg-primary text-white hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed px-6 py-3 rounded-xl shadow-md hover:shadow-lg font-semibold border border-primary/20 hover:border-primary/30 transition-all duration-200"
                                 whileHover={{ scale: 1.02, y: -1 }}
                                 whileTap={{ scale: 0.98 }}
                                 aria-label="Use generated password"
@@ -145,8 +145,8 @@ return (
                     </div>
                     
                     {/* Subtle decorative elements */}
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent" aria-hidden="true"></div>
-                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-slate-600/40 to-transparent" aria-hidden="true"></div>
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" aria-hidden="true"></div>
+                    <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-200/60 to-transparent" aria-hidden="true"></div>
                 </div>
             </ModalWrapper>
         </AnimatePresence>
