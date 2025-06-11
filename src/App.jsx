@@ -21,7 +21,7 @@ path={route.path}
           </Route>
         </Routes>
         
-        <ToastContainer
+<ToastContainer
           position="top-right"
           autoClose={3000}
           hideProgressBar={false}
@@ -31,8 +31,8 @@ path={route.path}
           pauseOnFocusLoss
           draggable
           pauseOnHover
-theme="light"
-          toastClassName="!bg-white !text-slate-900 !border !border-slate-200"
+          theme="light"
+          toastClassName="!bg-white !text-text-primary !border !border-surface-300"
           progressClassName="!bg-primary"
           className="z-[9999]"
         />
