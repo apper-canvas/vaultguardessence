@@ -13,7 +13,7 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                 <div className="flex items-center justify-between mb-3">
                     <Label>Password Length</Label>
                     <div className="flex items-center gap-2">
-                        <span className={`text-lg font-bold ${
+<span className={`text-lg font-bold ${
                             config.length < 8 ? 'text-red-400' :
                             config.length < 12 ? 'text-orange-400' :
                             config.length < 16 ? 'text-yellow-400' :
@@ -56,25 +56,25 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                         <span className="text-orange-400 text-[10px] mt-0.5">Fair</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-yellow-400">16</span>
+                        <span className="text-yellow-400">12</span>
                         <span className="text-yellow-400 text-[10px] mt-0.5">Good</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-green-400">32</span>
+                        <span className="text-green-400">16</span>
                         <span className="text-green-400 text-[10px] mt-0.5">Strong</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-emerald-400">64</span>
+                        <span className="text-emerald-400">24</span>
                         <span className="text-emerald-400 text-[10px] mt-0.5">V.Strong</span>
                     </div>
                     <div className="flex flex-col items-end">
-                        <span className="text-emerald-400">128</span>
+                        <span className="text-emerald-400">32+</span>
                         <span className="text-emerald-400 text-[10px] mt-0.5">Max</span>
                     </div>
                 </div>
                 <p className="text-xs text-slate-500 mt-3 text-center">
-                    {config.length < 8 ? 'Consider using at least 12 characters for better security' :
-                     config.length < 12 ? 'Good start! 16+ characters recommended for strong security' :
+                    {config.length < 8 ? 'Consider using at least 8 characters for better security' :
+                     config.length < 12 ? 'Good start! 12+ characters recommended for strong security' :
                      config.length < 16 ? 'Great choice! Your passwords will be quite secure' :
                      config.length < 24 ? 'Excellent! Very secure password length' :
                      'Outstanding! Maximum security password length'}

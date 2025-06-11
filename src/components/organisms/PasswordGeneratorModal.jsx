@@ -29,11 +29,11 @@ const PasswordGeneratorModal = ({ onClose, onUsePassword }) => {
         if (!password) return 0;
         let score = 0;
         
-        // Length bonus
-        if (password.length >= 8) score += 25;
+// Length bonus
+        if (password.length >= 8) score += 20;
         if (password.length >= 12) score += 25;
         if (password.length >= 16) score += 25;
-        
+        if (password.length >= 24) score += 30;
         // Character type bonuses
         if (/[a-z]/.test(password)) score += 5;
         if (/[A-Z]/.test(password)) score += 5;
