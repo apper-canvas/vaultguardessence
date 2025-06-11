@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "name": "Personal",
+    "icon": "User",
+    "color": "#2563EB"
+  },
+  {
+    "id": "2",
+    "name": "Work",
+    "icon": "Briefcase",
+    "color": "#10B981"
+  },
+  {
+    "id": "3",
+    "name": "Finance",
+    "icon": "CreditCard",
+    "color": "#F59E0B"
+  },
+  {
+    "id": "4",
+    "name": "Entertainment",
+    "icon": "Play",
+    "color": "#EF4444"
+  },
+  {
+    "id": "5",
+    "name": "Social",
+    "icon": "Users",
+    "color": "#8B5CF6"
+  },
+  {
+    "id": "6",
+    "name": "Shopping",
+    "icon": "ShoppingCart",
+    "color": "#06B6D4"
+  }
+]
