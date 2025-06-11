@@ -3,7 +3,7 @@ import Input from '@/components/atoms/Input';
 import ApperIcon from '@/components/ApperIcon';
 import Button from '@/components/atoms/Button';
 
-const PasswordToggleInput = ({ value, onChange, placeholder, required = false, className = '' }) => {
+const PasswordToggleInput = ({ value, onChange, placeholder, required = false, className = '', maxLength }) => {
     const [showPassword, setShowPassword] = useState(false);
 
     return (
@@ -15,6 +15,7 @@ const PasswordToggleInput = ({ value, onChange, placeholder, required = false, c
                 className="pr-10"
                 placeholder={placeholder}
                 required={required}
+                maxLength={maxLength}
             />
             <Button
                 type="button"

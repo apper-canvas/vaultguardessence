@@ -96,12 +96,13 @@ const CredentialForm = ({ initialData, categories, onSave, onCancel, onDelete, s
                 required
             />
 
-            <FormField label="Password" id="password" required>
+<FormField label="Password" id="password" required>
                 <PasswordToggleInput
                     value={formData.password}
                     onChange={(e) => handleInputChange('password', e.target.value)}
                     placeholder="Enter password"
                     required
+                    maxLength="16"
                 />
             </FormField>
             {formData.password && (

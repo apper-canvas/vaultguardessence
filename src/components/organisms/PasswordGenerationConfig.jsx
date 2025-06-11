@@ -13,11 +13,11 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                 <div className="flex items-center justify-between mb-3">
                     <Label>Password Length</Label>
                     <div className="flex items-center gap-2">
-<span className={`text-lg font-bold ${
+                        <span className={`text-lg font-bold ${
                             config.length < 8 ? 'text-red-400' :
                             config.length < 12 ? 'text-orange-400' :
-                            config.length < 16 ? 'text-yellow-400' :
-                            config.length < 24 ? 'text-green-400' :
+                            config.length < 14 ? 'text-yellow-400' :
+                            config.length < 16 ? 'text-green-400' :
                             'text-emerald-400'
                         }`}>
                             {config.length}
@@ -26,14 +26,14 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                         <span className={`text-xs px-2 py-1 rounded-full font-medium ${
                             config.length < 8 ? 'bg-red-900/30 text-red-400' :
                             config.length < 12 ? 'bg-orange-900/30 text-orange-400' :
-                            config.length < 16 ? 'bg-yellow-900/30 text-yellow-400' :
-                            config.length < 24 ? 'bg-green-900/30 text-green-400' :
+                            config.length < 14 ? 'bg-yellow-900/30 text-yellow-400' :
+                            config.length < 16 ? 'bg-green-900/30 text-green-400' :
                             'bg-emerald-900/30 text-emerald-400'
                         }`}>
                             {config.length < 8 ? 'Weak' :
                              config.length < 12 ? 'Fair' :
-                             config.length < 16 ? 'Good' :
-                             config.length < 24 ? 'Strong' :
+                             config.length < 14 ? 'Good' :
+                             config.length < 16 ? 'Strong' :
                              'Very Strong'}
                         </span>
                     </div>
@@ -41,7 +41,7 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                 <Input
                     type="range"
                     min="4"
-                    max="128"
+                    max="16"
                     value={config.length}
                     onChange={(e) => onConfigChange('length', parseInt(e.target.value))}
                     className="h-3 bg-slate-700 rounded-lg appearance-none cursor-pointer slider mb-2"
@@ -60,23 +60,19 @@ const PasswordGenerationConfig = ({ config, onConfigChange }) => {
                         <span className="text-yellow-400 text-[10px] mt-0.5">Good</span>
                     </div>
                     <div className="flex flex-col items-center">
-                        <span className="text-green-400">16</span>
+                        <span className="text-green-400">14</span>
                         <span className="text-green-400 text-[10px] mt-0.5">Strong</span>
                     </div>
-                    <div className="flex flex-col items-center">
-                        <span className="text-emerald-400">24</span>
-                        <span className="text-emerald-400 text-[10px] mt-0.5">V.Strong</span>
-                    </div>
                     <div className="flex flex-col items-end">
-                        <span className="text-emerald-400">32+</span>
+                        <span className="text-emerald-400">16</span>
                         <span className="text-emerald-400 text-[10px] mt-0.5">Max</span>
                     </div>
                 </div>
                 <p className="text-xs text-slate-500 mt-3 text-center">
                     {config.length < 8 ? 'Consider using at least 8 characters for better security' :
                      config.length < 12 ? 'Good start! 12+ characters recommended for strong security' :
-                     config.length < 16 ? 'Great choice! Your passwords will be quite secure' :
-                     config.length < 24 ? 'Excellent! Very secure password length' :
+                     config.length < 14 ? 'Great choice! Your passwords will be quite secure' :
+                     config.length < 16 ? 'Excellent! Very secure password length' :
                      'Outstanding! Maximum security password length'}
                 </p>
             </div>
