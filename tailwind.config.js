@@ -16,10 +16,11 @@ colors: {
         warning: '#d97706',
         error: '#dc2626',
         info: '#2563eb',
-        text: {
+text: {
           primary: '#0f172a',
-          secondary: '#475569',
-          muted: '#64748b'
+          secondary: '#334155',
+          muted: '#64748b',
+          tertiary: '#94a3b8'
         },
         'surface': {
           50: '#f8fafc',

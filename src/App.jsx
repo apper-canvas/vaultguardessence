@@ -6,7 +6,7 @@ import { routes, routeArray } from './config/routes';
 function App() {
   return (
     <BrowserRouter>
-<div className="min-h-screen bg-background text-slate-900">
+<div className="min-h-screen bg-background text-text-primary">
         <Routes>
 <Route path="/" element={<Layout />}>
               <Route index element={<routes.home.component />} />
@@ -32,7 +32,7 @@ path={route.path}
           draggable
           pauseOnHover
 theme="light"
-          toastClassName="!bg-white !text-slate-900 !border !border-slate-200"
+toastClassName="!bg-white !text-text-primary !border !border-slate-200"
           progressClassName="!bg-primary"
           className="z-[9999]"
         />

@@ -21,11 +21,11 @@ className="bg-white rounded-lg p-4 border border-slate-200 hover:border-slate-30
                         <ApperIcon name="Globe" size={20} className="text-white" />
                     </div>
                     <div className="min-w-0 flex-1">
-                        <h3 className="font-medium text-slate-900 truncate">{credential.title}</h3>
-                        <p className="text-sm text-slate-600 truncate">{credential.username}</p>
+<h3 className="font-medium text-text-primary truncate">{credential.title}</h3>
+                        <p className="text-sm text-text-secondary truncate">{credential.username}</p>
                         <div className="flex items-center space-x-2 mt-1">
                             <StrengthMeter strength={credential.strength} size="sm" />
-                            <span className="text-xs text-slate-500">
+<span className="text-xs text-text-tertiary">
                                 Last used {formatDistanceToNow(new Date(credential.lastUsed), { addSuffix: true })}
                             </span>
                         </div>
@@ -43,7 +43,7 @@ className="bg-white rounded-lg p-4 border border-slate-200 hover:border-slate-30
                         className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
                         title="Copy password"
                     >
-                        <ApperIcon name="Copy" size={16} className="text-slate-600" />
+<ApperIcon name="Copy" size={16} className="text-text-secondary" />
                     </Button>
                     <ApperIcon name="ChevronRight" size={16} className="text-slate-600" />
                 </div>

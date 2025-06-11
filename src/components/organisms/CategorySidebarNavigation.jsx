@@ -14,7 +14,7 @@ const CategorySidebarNavigation = ({
 
     return (
         <div className="p-4 space-y-2 h-full overflow-y-auto custom-scrollbar">
-            <h3 className="text-lg font-bold text-slate-100 mb-4">Categories</h3>
+<h3 className="text-lg font-bold text-white mb-4">Categories</h3>
             
             {/* All Credentials */}
             <CategoryFilterItem
@@ -43,24 +43,24 @@ const CategorySidebarNavigation = ({
 
             {/* Quick Actions */}
             <div className="pt-4 mt-4 border-t border-slate-700">
-                <h4 className="text-sm font-medium text-slate-400 mb-2">Quick Actions</h4>
+<h4 className="text-sm font-medium text-slate-300 mb-2">Quick Actions</h4>
                 <div className="space-y-1">
                     <Button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-white transition-all duration-200"
+className="w-full flex items-center space-x-3 p-3 rounded-lg text-slate-200 hover:bg-slate-700 hover:text-white transition-all duration-200"
                     >
                         <ApperIcon name="AlertTriangle" size={20} />
-                        <span className="font-medium">Weak Passwords</span>
+<span className="font-medium text-sm">Weak Passwords</span>
                     </Button>
                     
                     <Button
                         whileHover={{ scale: 1.02 }}
                         whileTap={{ scale: 0.98 }}
-                        className="w-full flex items-center space-x-3 p-3 rounded-lg text-slate-300 hover:bg-slate-700 hover:text-white transition-all duration-200"
+className="w-full flex items-center space-x-3 p-3 rounded-lg text-slate-200 hover:bg-slate-700 hover:text-white transition-all duration-200"
                     >
                         <ApperIcon name="Copy" size={20} />
-                        <span className="font-medium">Duplicate Passwords</span>
+<span className="font-medium text-sm">Duplicate Passwords</span>
                     </Button>
                 </div>
             </div>
