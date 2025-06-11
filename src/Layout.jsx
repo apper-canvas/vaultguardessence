@@ -24,7 +24,7 @@ const Layout = () => {
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-info rounded-lg flex items-center justify-center">
                 <ApperIcon name="Shield" size={20} className="text-white" />
               </div>
-              <h1 className="text-xl font-bold text-slate-900">VaultGuard</h1>
+<h1 className="text-xl font-bold text-slate-800">VaultGuard</h1>
             </div>
           </div>
           
@@ -33,16 +33,16 @@ const Layout = () => {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
           >
-            <ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-slate-700" />
+<ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-slate-600" />
           </button>
           
           {/* Desktop quick actions */}
           <div className="hidden md:flex items-center space-x-2">
             <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
-              <ApperIcon name="Search" size={20} className="text-slate-700" />
+<ApperIcon name="Search" size={20} className="text-slate-600" />
             </button>
             <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
-              <ApperIcon name="Plus" size={20} className="text-slate-700" />
+<ApperIcon name="Plus" size={20} className="text-slate-600" />
             </button>
           </div>
         </div>
@@ -58,10 +58,8 @@ const Layout = () => {
                 to={item.path}
                 className={({ isActive }) => `
                   flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
-                  ${isActive 
-                    ? 'bg-primary text-white shadow-lg' 
-                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                  }
+? 'bg-primary text-white shadow-lg' 
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-slate-800'
                 `}
               >
                 <ApperIcon name={item.icon} size={20} />
@@ -97,10 +95,8 @@ const Layout = () => {
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) => `
                         flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
-                        ${isActive 
-                          ? 'bg-primary text-white shadow-lg' 
-                          : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
-                        }
+? 'bg-primary text-white shadow-lg' 
+                          : 'text-slate-700 hover:bg-slate-50 hover:text-slate-800'
                       `}
                     >
                       <ApperIcon name={item.icon} size={20} />

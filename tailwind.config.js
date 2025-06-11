@@ -5,28 +5,33 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
+extend: {
 colors: {
-        primary: '#2563EB',
+        primary: '#1d4ed8',
         secondary: '#f1f5f9',
-        accent: '#10B981',
+        accent: '#0d9488',
         surface: '#ffffff',
         background: '#f8fafc',
-        success: '#10B981',
-        warning: '#F59E0B',
-        error: '#EF4444',
-        info: '#3B82F6',
+        success: '#059669',
+        warning: '#d97706',
+        error: '#dc2626',
+        info: '#2563eb',
+        text: {
+          primary: '#0f172a',
+          secondary: '#475569',
+          muted: '#64748b'
+        },
         'surface': {
-          50: '#0f172a',
-          100: '#1e293b',
-          200: '#334155',
-          300: '#475569',
-          400: '#64748b',
-          500: '#94a3b8',
-          600: '#cbd5e1',
-          700: '#e2e8f0',
-          800: '#f1f5f9',
-          900: '#f8fafc'
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a'
         }
       },
       fontFamily: {
