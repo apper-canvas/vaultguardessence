@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import SettingItem from '@/components/molecules/SettingItem';
 import IconContainer from '@/components/atoms/IconContainer';
 
-const SettingsCategoryBlock = ({ category, categoryIndex }) => {
+const SettingsCategoryBlock = ({ category, categoryIndex, onSettingUpdate }) => {
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -25,8 +25,14 @@ const SettingsCategoryBlock = ({ category, categoryIndex }) => {
                         name={setting.name}
                         description={setting.description}
                         actionText={setting.action}
+                        settingKey={setting.key}
+                        settingType={setting.type}
+                        options={setting.options}
+                        min={setting.min}
+                        max={setting.max}
                         isDanger={setting.danger}
                         transitionDelay={(categoryIndex * 0.1) + (settingIndex * 0.05)}
+                        onUpdate={onSettingUpdate}
                     />
                 ))}
             </div>
