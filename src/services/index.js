@@ -5,7 +5,3 @@ export {
   credentialService,
   settingsService
 };
-
-export {
-  credentialService
-};
