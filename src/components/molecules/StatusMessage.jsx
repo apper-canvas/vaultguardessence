@@ -19,7 +19,7 @@ const StatusMessage = ({ type, message, subMessage, onAction, actionText }) => {
             break;
         case 'empty':
             iconName = 'Shield';
-            iconColorClass = 'text-slate-400';
+            iconColorClass = 'text-text-secondary';
             animateProps = { y: [0, -10, 0], transition: { repeat: Infinity, duration: 3 } };
             break;
         default:
@@ -36,8 +36,8 @@ const StatusMessage = ({ type, message, subMessage, onAction, actionText }) => {
                 >
                     <ApperIcon name={iconName} size={48} className={`${iconColorClass} mx-auto`} />
                 </motion.div>
-                <h3 className="text-lg font-medium text-slate-100 mb-2">{message}</h3>
-                {subMessage && <p className="text-slate-400 mb-4">{subMessage}</p>}
+                <h3 className="text-lg font-medium text-white mb-2">{message}</h3>
+                {subMessage && <p className="text-text-secondary mb-4">{subMessage}</p>}
                 {onAction && actionText && (
                     <Button
                         onClick={onAction}

@@ -45,8 +45,8 @@ const SettingsPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-3xl font-bold text-slate-100 mb-2">Settings</h1>
-          <p className="text-slate-400">Manage your security preferences and vault configuration</p>
+<h1 className="text-3xl font-bold text-white mb-2">Settings</h1>
+          <p className="text-text-secondary">Manage your security preferences and vault configuration</p>
         </motion.div>
 
         <div className="space-y-8">

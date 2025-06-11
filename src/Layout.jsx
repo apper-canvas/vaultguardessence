@@ -30,7 +30,7 @@ const Layout = () => {
           
           {/* Mobile menu button */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-surface-100 transition-colors"
           >
             <ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-text-secondary" />

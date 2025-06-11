@@ -13,14 +13,14 @@ colors: {
         surface: '#ffffff',
         background: '#ffffff',
         success: '#059669',
-        warning: '#6b7280',
+        warning: '#059669',
         error: '#000000',
         info: '#059669',
         text: {
           primary: '#000000',
-          secondary: '#6b7280',
-          muted: '#9ca3af',
-          tertiary: '#d1d5db'
+          secondary: '#059669',
+          muted: '#ffffff',
+          tertiary: '#ffffff'
         },
         'surface': {
           50: '#ffffff',

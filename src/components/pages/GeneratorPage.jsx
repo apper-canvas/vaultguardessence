@@ -17,10 +17,9 @@ const GeneratorPage = () => {
           className="text-center mb-8"
         >
           <IconContainer iconName="Key" iconSize={32} containerSize="lg" gradientFrom="info" gradientTo="primary" className="mx-auto mb-4" />
-          <h1 className="text-3xl font-bold text-slate-100 mb-2">Password Generator</h1>
-          <p className="text-slate-400">Create strong, unique passwords to protect your accounts</p>
+<h1 className="text-3xl font-bold text-white mb-2">Password Generator</h1>
+          <p className="text-text-secondary">Create strong, unique passwords to protect your accounts</p>
         </motion.div>
-
         {showGenerator && (
           // PasswordGeneratorModal acts as a standalone component here,
           // but styled as a modal for consistency with its use in VaultPage.
