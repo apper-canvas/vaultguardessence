@@ -123,10 +123,10 @@ return (
                         </div>
 
                         {/* Action buttons with clean styling */}
-                        <div className="flex items-center justify-end space-x-4 pt-6 border-t border-gray-100">
+<div className="flex items-center justify-end space-x-4 pt-6 border-t border-gray-100">
                             <Button
                                 onClick={onClose}
-                                className="px-6 py-3 text-gray-600 hover:text-gray-900 bg-white hover:bg-gray-50 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-200 font-medium"
+                                className="px-6 py-3 bg-white hover:bg-gray-50 rounded-xl border border-gray-200 hover:border-gray-300 transition-all duration-200 font-medium"
                                 aria-label="Cancel password generation"
                             >
                                 Cancel
