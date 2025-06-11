@@ -22,6 +22,27 @@ let settings = { ...defaultSettings };
 
 // Button action handlers
 const buttonActions = {
+  theme: async (currentTheme) => {
+    await delay(200);
+    // Toggle between Dark and Light themes
+    const newTheme = currentTheme === 'Dark' ? 'Light' : 'Dark';
+    
+    // Apply theme to document root for Tailwind dark mode
+    if (newTheme === 'Dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    
+    // Update settings state
+    settings.theme = newTheme;
+    
+    return { 
+      success: true, 
+      message: `Theme changed to ${newTheme} mode`,
+      value: newTheme
+    };
+  },
   masterPassword: async () => {
     await delay(300);
     // Simulate password change flow
