@@ -28,14 +28,20 @@ const SettingsPage = () => {
     }
   };
 
-  const handleSettingUpdate = async (settingKey, value) => {
+const handleSettingUpdate = async (settingKey, value) => {
     try {
       const updatedSettings = await settingsService.update(settingKey, value);
       setSettingsData(updatedSettings);
-      toast.success('Setting updated successfully');
+      
+      // Show appropriate success message
+      if (updatedSettings.actionResult) {
+        toast.success(updatedSettings.actionResult);
+      } else {
+        toast.success('Setting updated successfully');
+      }
       return true;
     } catch (err) {
-      toast.error('Failed to update setting');
+      toast.error(err.message || 'Failed to update setting');
       return false;
     }
   };
