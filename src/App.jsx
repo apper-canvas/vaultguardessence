@@ -32,7 +32,7 @@ path={route.path}
           draggable
           pauseOnHover
           theme="light"
-          toastClassName="!bg-white !text-text-primary !border !border-surface-300"
+toastClassName="!bg-white !text-black !border !border-surface-300"
           progressClassName="!bg-primary"
           className="z-[9999]"
         />

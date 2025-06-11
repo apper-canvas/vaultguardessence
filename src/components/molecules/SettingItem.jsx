@@ -65,11 +65,11 @@ const SettingItem = ({
     const renderEditControl = () => {
         if (settingType === 'select') {
             return (
-                <select
+<select
                     value={editValue}
                     onChange={(e) => setEditValue(e.target.value)}
                     onKeyDown={handleKeyPress}
-                    className="px-3 py-1 rounded-lg bg-slate-700 text-slate-200 border border-slate-600 focus:border-primary focus:outline-none min-w-[80px]"
+                    className="px-3 py-1 rounded-lg bg-slate-700 text-black border border-slate-600 focus:border-primary focus:outline-none min-w-[80px]"
                     autoFocus
                 >
                     {options.map(option => (
@@ -81,14 +81,14 @@ const SettingItem = ({
 
         if (settingType === 'number') {
             return (
-                <Input
+<Input
                     type="number"
                     value={editValue}
                     onChange={(e) => setEditValue(e.target.value)}
                     onKeyDown={handleKeyPress}
                     min={min}
                     max={max}
-                    className="px-3 py-1 rounded-lg bg-slate-700 text-slate-200 border border-slate-600 focus:border-primary focus:outline-none w-16 text-center"
+                    className="px-3 py-1 rounded-lg bg-slate-700 text-black border border-slate-600 focus:border-primary focus:outline-none w-16 text-center"
                     autoFocus
                 />
             );
@@ -122,10 +122,10 @@ const SettingItem = ({
                         >
                             {isLoading ? 'Saving...' : 'Save'}
                         </Button>
-                        <Button
+<Button
                             onClick={handleCancel}
                             disabled={isLoading}
-                            className="px-3 py-1 text-sm rounded-lg bg-slate-600 text-slate-200 hover:bg-slate-500"
+                            className="px-3 py-1 text-sm rounded-lg bg-slate-600 text-black hover:bg-slate-500"
                         >
                             Cancel
                         </Button>
@@ -136,11 +136,11 @@ const SettingItem = ({
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         className={`px-4 py-2 rounded-lg font-medium transition-colors ${
-                            isDanger
+isDanger
                                 ? 'bg-error text-white hover:bg-red-600'
                                 : settingType === 'button'
-                                ? 'bg-slate-700 text-slate-200 hover:bg-slate-600'
-                                : 'bg-slate-700 text-slate-200 hover:bg-slate-600 cursor-pointer'
+                                ? 'bg-slate-700 text-black hover:bg-slate-600'
+                                : 'bg-slate-700 text-black hover:bg-slate-600 cursor-pointer'
                         }`}
                     >
                         {actionText}

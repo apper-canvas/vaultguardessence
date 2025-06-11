@@ -56,11 +56,11 @@ onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               <NavLink
                 key={item.id}
                 to={item.path}
-                className={({ isActive }) => `
+className={({ isActive }) => `
                   flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
                   ${isActive 
                     ? 'bg-primary text-white shadow-lg' 
-                    : 'text-text-primary hover:bg-surface-100 hover:text-text-primary'
+                    : 'text-black hover:bg-surface-100 hover:text-black'
                   }
                 `}
               >
@@ -95,11 +95,11 @@ onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                       key={item.id}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={({ isActive }) => `
+className={({ isActive }) => `
                         flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
                         ${isActive 
                           ? 'bg-primary text-white shadow-lg' 
-                          : 'text-text-primary hover:bg-surface-100 hover:text-text-primary'
+                          : 'text-black hover:bg-surface-100 hover:text-black'
                         }
                       `}
                     >
