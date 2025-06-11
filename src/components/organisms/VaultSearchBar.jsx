@@ -5,9 +5,9 @@ import ActionButton from '@/components/molecules/ActionButton';
 
 const VaultSearchBar = ({ searchTerm, onSearchTermChange, onAddCredential, onGeneratePassword }) => {
     return (
-        <div className="flex-shrink-0 p-6 bg-surface border-b border-slate-700">
+<div className="flex-shrink-0 p-6 bg-white border-b border-slate-200">
             <div className="flex items-center justify-between mb-4">
-                <h2 className="text-2xl font-bold text-slate-100">Password Vault</h2>
+                <h2 className="text-2xl font-bold text-slate-900">Password Vault</h2>
                 <div className="flex items-center space-x-2">
                     <ActionButton
                         icon="Key"
@@ -25,7 +25,7 @@ const VaultSearchBar = ({ searchTerm, onSearchTermChange, onAddCredential, onGen
             </div>
             
             <div className="relative">
-                <ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" />
+<ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-600" />
                 <Input
                     type="text"
                     placeholder="Search credentials..."

@@ -12,7 +12,7 @@ const CredentialCard = ({ credential, index, onSelect, onCopyPassword }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
-            className="bg-slate-800 rounded-lg p-4 border border-slate-700 hover:border-slate-600 transition-all duration-200 cursor-pointer group"
+className="bg-white rounded-lg p-4 border border-slate-200 hover:border-slate-300 transition-all duration-200 cursor-pointer group shadow-sm hover:shadow-md"
             onClick={() => onSelect(credential)}
         >
             <div className="flex items-center justify-between">
@@ -21,8 +21,8 @@ const CredentialCard = ({ credential, index, onSelect, onCopyPassword }) => {
                         <ApperIcon name="Globe" size={20} className="text-white" />
                     </div>
                     <div className="min-w-0 flex-1">
-                        <h3 className="font-medium text-slate-100 truncate">{credential.title}</h3>
-                        <p className="text-sm text-slate-400 truncate">{credential.username}</p>
+                        <h3 className="font-medium text-slate-900 truncate">{credential.title}</h3>
+                        <p className="text-sm text-slate-600 truncate">{credential.username}</p>
                         <div className="flex items-center space-x-2 mt-1">
                             <StrengthMeter strength={credential.strength} size="sm" />
                             <span className="text-xs text-slate-500">
@@ -32,7 +32,7 @@ const CredentialCard = ({ credential, index, onSelect, onCopyPassword }) => {
                     </div>
                 </div>
                 
-                <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                     <Button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -40,12 +40,12 @@ const CredentialCard = ({ credential, index, onSelect, onCopyPassword }) => {
                             e.stopPropagation();
                             onCopyPassword(credential.password);
                         }}
-                        className="p-2 rounded-lg hover:bg-slate-700 transition-colors"
+                        className="p-2 rounded-lg hover:bg-slate-100 transition-colors"
                         title="Copy password"
                     >
-                        <ApperIcon name="Copy" size={16} className="text-slate-400" />
+                        <ApperIcon name="Copy" size={16} className="text-slate-600" />
                     </Button>
-                    <ApperIcon name="ChevronRight" size={16} className="text-slate-400" />
+                    <ApperIcon name="ChevronRight" size={16} className="text-slate-600" />
                 </div>
             </div>
         </motion.div>

@@ -15,34 +15,34 @@ const Layout = () => {
   ];
 
   return (
-    <div className="h-screen flex flex-col overflow-hidden bg-background">
+<div className="h-screen flex flex-col overflow-hidden bg-background">
       {/* Header */}
-      <header className="flex-shrink-0 h-16 bg-surface border-b border-slate-700 z-40">
+<header className="flex-shrink-0 h-16 bg-white border-b border-slate-200 z-40">
         <div className="h-full px-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-info rounded-lg flex items-center justify-center">
                 <ApperIcon name="Shield" size={20} className="text-white" />
               </div>
-              <h1 className="text-xl font-bold text-slate-100">VaultGuard</h1>
+              <h1 className="text-xl font-bold text-slate-900">VaultGuard</h1>
             </div>
           </div>
           
-          {/* Mobile menu button */}
+{/* Mobile menu button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-lg hover:bg-slate-700 transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
           >
-            <ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} />
+            <ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-slate-700" />
           </button>
           
           {/* Desktop quick actions */}
           <div className="hidden md:flex items-center space-x-2">
-            <button className="p-2 rounded-lg hover:bg-slate-700 transition-colors">
-              <ApperIcon name="Search" size={20} />
+            <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
+              <ApperIcon name="Search" size={20} className="text-slate-700" />
             </button>
-            <button className="p-2 rounded-lg hover:bg-slate-700 transition-colors">
-              <ApperIcon name="Plus" size={20} />
+            <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
+              <ApperIcon name="Plus" size={20} className="text-slate-700" />
             </button>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Layout = () => {
 
       <div className="flex-1 flex overflow-hidden">
         {/* Desktop Sidebar */}
-        <aside className="hidden md:block w-64 bg-surface border-r border-slate-700 z-40">
+<aside className="hidden md:block w-64 bg-white border-r border-slate-200 z-40">
           <nav className="p-4 space-y-2 custom-scrollbar overflow-y-auto h-full">
             {navigationItems.map((item) => (
               <NavLink
@@ -60,7 +60,7 @@ const Layout = () => {
                   flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
                   ${isActive 
                     ? 'bg-primary text-white shadow-lg' 
-                    : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                   }
                 `}
               >
@@ -72,7 +72,7 @@ const Layout = () => {
         </aside>
 
         {/* Mobile Menu Overlay */}
-        <AnimatePresence>
+<AnimatePresence>
           {mobileMenuOpen && (
             <>
               <motion.div
@@ -87,7 +87,7 @@ const Layout = () => {
                 animate={{ x: 0 }}
                 exit={{ x: -280 }}
                 transition={{ type: "tween", duration: 0.3 }}
-                className="fixed top-16 left-0 bottom-0 w-64 bg-surface border-r border-slate-700 z-50 md:hidden"
+                className="fixed top-16 left-0 bottom-0 w-64 bg-white border-r border-slate-200 z-50 md:hidden"
               >
                 <nav className="p-4 space-y-2">
                   {navigationItems.map((item) => (
@@ -99,7 +99,7 @@ const Layout = () => {
                         flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
                         ${isActive 
                           ? 'bg-primary text-white shadow-lg' 
-                          : 'text-slate-300 hover:bg-slate-700 hover:text-white'
+                          : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
                         }
                       `}
                     >
