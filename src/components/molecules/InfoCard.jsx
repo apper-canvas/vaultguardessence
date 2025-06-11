@@ -16,8 +16,8 @@ const InfoCard = ({ iconName, title, description, gradientFrom, gradientTo, clas
                 gradientTo={gradientTo} 
                 className="mx-auto mb-4"
             />
-<h3 className="text-lg font-bold text-white mb-2">{title}</h3>
-            <p className="text-text-secondary">{description}</p>
+<h3 className="text-lg font-bold text-green-500 mb-2">{title}</h3>
+                <p className="text-text-secondary">{description}</p>
             {children}
         </motion.div>
     );

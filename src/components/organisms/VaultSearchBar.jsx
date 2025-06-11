@@ -24,8 +24,8 @@ const VaultSearchBar = ({ searchTerm, onSearchTermChange, onAddCredential, onGen
                 </div>
             </div>
             
-            <div className="relative">
-<ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-600" />
+<div className="relative">
+                <ApperIcon name="Search" size={20} className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-600" />
                 <Input
                     type="text"
                     placeholder="Search credentials..."

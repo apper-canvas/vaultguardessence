@@ -17,8 +17,8 @@ className="bg-white rounded-lg p-4 border border-surface-300 hover:border-surfac
         >
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3 min-w-0 flex-1">
-                    <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
-                        <ApperIcon name="Globe" size={20} className="text-white" />
+<div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                        <ApperIcon name="Globe" size={20} className="text-black" />
                     </div>
                     <div className="min-w-0 flex-1">
                         <h3 className="font-medium text-text-primary truncate">{credential.title}</h3>

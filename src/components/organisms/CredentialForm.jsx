@@ -157,16 +157,16 @@ const CredentialForm = ({ initialData, categories, onSave, onCancel, onDelete, s
                     )}
                 </div>
                 <div className="flex items-center space-x-3">
-                    <Button
+<Button
                         type="button"
                         onClick={onCancel}
                         className="px-4 py-2 text-slate-700 hover:bg-slate-100 rounded-lg border border-slate-200"
                     >
                         Cancel
                     </Button>
-                    <Button
+<Button
                         type="submit"
-                        className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600"
+                        className="px-4 py-2 bg-primary text-black rounded-lg hover:bg-blue-600"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

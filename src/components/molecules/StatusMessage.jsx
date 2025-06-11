@@ -34,9 +34,9 @@ const StatusMessage = ({ type, message, subMessage, onAction, actionText }) => {
                     animate={animateProps}
                     className="mb-4"
                 >
-                    <ApperIcon name={iconName} size={48} className={`${iconColorClass} mx-auto`} />
+<ApperIcon name={iconName} size={48} className={`${iconColorClass} mx-auto`} />
                 </motion.div>
-                <h3 className="text-lg font-medium text-white mb-2">{message}</h3>
+                <h3 className="text-lg font-medium text-green-400 mb-2">{message}</h3>
                 {subMessage && <p className="text-text-secondary mb-4">{subMessage}</p>}
                 {onAction && actionText && (
                     <Button

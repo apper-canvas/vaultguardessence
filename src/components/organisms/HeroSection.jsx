@@ -13,8 +13,8 @@ const HeroSection = ({ onOpenVault, onGeneratePassword }) => {
                 transition={{ duration: 0.6 }}
                 className="mb-8"
             >
-                <IconContainer iconName="Shield" iconSize={40} containerSize="xl" gradientFrom="primary" gradientTo="info" className="mx-auto mb-6" />
-<h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
+<IconContainer iconName="Shield" iconSize={40} containerSize="xl" gradientFrom="primary" gradientTo="info" className="mx-auto mb-6" />
+                <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6">
                     Your Password
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-info"> Fortress</span>
                 </h1>
@@ -32,8 +32,8 @@ const HeroSection = ({ onOpenVault, onGeneratePassword }) => {
                     <ActionButton
                         icon="Key"
                         text="Generate Password"
-                        onClick={onGeneratePassword}
-className="bg-surface border border-slate-600 text-slate-800 hover:bg-slate-700 hover:text-slate-100 text-lg"
+onClick={onGeneratePassword}
+                        className="bg-surface border border-slate-600 text-slate-800 hover:bg-slate-700 hover:text-slate-100 text-lg"
                     />
                 </div>
             </motion.div>
