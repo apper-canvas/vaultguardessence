@@ -30,21 +30,21 @@ const Layout = () => {
           
 {/* Mobile menu button */}
           <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-slate-100 transition-colors"
           >
-<ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-slate-600" />
+            <ApperIcon name={mobileMenuOpen ? "X" : "Menu"} size={20} className="text-slate-700" />
           </button>
           
           {/* Desktop quick actions */}
-          <div className="hidden md:flex items-center space-x-2">
+<div className="hidden md:flex items-center space-x-2">
             <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
-<ApperIcon name="Search" size={20} className="text-slate-600" />
+              <ApperIcon name="Search" size={20} className="text-slate-700" />
             </button>
             <button className="p-2 rounded-lg hover:bg-slate-100 transition-colors">
-<ApperIcon name="Plus" size={20} className="text-slate-600" />
-            </button>
-          </div>
+<ApperIcon name="Plus" size={20} className="text-slate-700" />
+          </button>
+        </div>
         </div>
       </header>
 
@@ -53,13 +53,15 @@ const Layout = () => {
 <aside className="hidden md:block w-64 bg-white border-r border-slate-200 z-40">
           <nav className="p-4 space-y-2 custom-scrollbar overflow-y-auto h-full">
             {navigationItems.map((item) => (
-              <NavLink
+<NavLink
                 key={item.id}
                 to={item.path}
                 className={({ isActive }) => `
                   flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
-? 'bg-primary text-white shadow-lg' 
-                    : 'text-slate-700 hover:bg-slate-50 hover:text-slate-800'
+                  ${isActive 
+                    ? 'bg-primary text-white shadow-lg' 
+                    : 'text-slate-800 hover:bg-slate-50 hover:text-slate-900'
+                  }
                 `}
               >
                 <ApperIcon name={item.icon} size={20} />
@@ -89,14 +91,16 @@ const Layout = () => {
               >
                 <nav className="p-4 space-y-2">
                   {navigationItems.map((item) => (
-                    <NavLink
+<NavLink
                       key={item.id}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
                       className={({ isActive }) => `
                         flex items-center space-x-3 px-3 py-2 rounded-lg transition-all duration-200
-? 'bg-primary text-white shadow-lg' 
-                          : 'text-slate-700 hover:bg-slate-50 hover:text-slate-800'
+                        ${isActive 
+                          ? 'bg-primary text-white shadow-lg' 
+                          : 'text-slate-800 hover:bg-slate-50 hover:text-slate-900'
+                        }
                       `}
                     >
                       <ApperIcon name={item.icon} size={20} />

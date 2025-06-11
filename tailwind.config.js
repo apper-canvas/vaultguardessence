@@ -19,8 +19,8 @@ colors: {
 text: {
           primary: '#0f172a',
           secondary: '#334155',
-          muted: '#64748b',
-          tertiary: '#94a3b8'
+          muted: '#475569',
+          tertiary: '#64748b'
         },
         'surface': {
           50: '#f8fafc',
