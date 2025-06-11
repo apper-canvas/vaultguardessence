@@ -4,7 +4,7 @@ const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 // Default settings data
 const defaultSettings = {
   theme: 'Dark',
-  defaultPasswordLength: '16',
+  defaultPasswordLength: 16,
   clipboardTimeout: '30s',
   masterPassword: 'Change',
   twoFactorAuth: 'Setup',
@@ -15,6 +15,21 @@ const defaultSettings = {
   backupSync: 'Setup',
   deleteAllData: 'Delete',
   notifications: 'Enable'
+};
+
+// Settings configuration with types and constraints
+const settingsConfig = {
+  defaultPasswordLength: {
+    type: 'number',
+    min: 8,
+    max: 64
+  }
+};
+
+// Updated settings object with configuration
+const settings = {
+  ...defaultSettings,
+  getConfig: (key) => settingsConfig[key] || { type: 'button' }
 };
 
 // Current settings (could be loaded from localStorage in real app)
