@@ -93,38 +93,16 @@ export const settingsService = {
     settings[key] = value;
     return { ...settings };
   },
-
-  // Get a specific setting
+// Get a specific setting
   async get(key) {
     await delay(100);
     return settings[key];
-  }
-};
-
-// In-memory storage for demo purposes
-let settings = { ...defaultSettings };
-
-const settingsService = {
-  async getAll() {
-    await delay(200);
-    return { ...settings };
   },
 
-  async update(settingKey, value) {
-    await delay(300);
-    if (!settings.hasOwnProperty(settingKey)) {
-      throw new Error(`Setting '${settingKey}' not found`);
-    }
-    
-    settings[settingKey] = value;
-    return { ...settings };
-  },
-
+  // Reset all settings to defaults
   async reset() {
     await delay(200);
     settings = { ...defaultSettings };
     return { ...settings };
   }
 };
-
-export default settingsService;
